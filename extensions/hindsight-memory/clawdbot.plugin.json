@@ -1,0 +1,56 @@
+{
+  "id": "hindsight-memory",
+  "kind": "memory",
+  "uiHints": {
+    "baseUrl": {
+      "label": "Hindsight API URL",
+      "placeholder": "http://localhost:8001",
+      "help": "Base URL for the Hindsight dataplane API"
+    },
+    "bankId": {
+      "label": "Memory Bank ID",
+      "placeholder": "aletheia",
+      "help": "Hindsight bank ID for storing/retrieving memories"
+    },
+    "apiKey": {
+      "label": "API Key (optional)",
+      "sensitive": true,
+      "placeholder": "your-api-key",
+      "help": "Optional API key for Hindsight authentication"
+    },
+    "autoRetain": {
+      "label": "Auto-Retain Messages",
+      "help": "Automatically store all conversation messages in Hindsight"
+    },
+    "autoRecall": {
+      "label": "Auto-Recall Context",
+      "help": "Automatically inject relevant memories before agent runs"
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "baseUrl": {
+        "type": "string",
+        "default": "http://localhost:8001"
+      },
+      "bankId": {
+        "type": "string",
+        "default": "aletheia"
+      },
+      "apiKey": {
+        "type": "string"
+      },
+      "autoRetain": {
+        "type": "boolean",
+        "default": true
+      },
+      "autoRecall": {
+        "type": "boolean",
+        "default": false
+      }
+    },
+    "required": ["baseUrl", "bankId"]
+  }
+}

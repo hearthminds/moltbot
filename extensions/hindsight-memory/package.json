@@ -1,0 +1,14 @@
+{
+  "name": "@moltbot/hindsight-memory",
+  "version": "2026.1.26",
+  "type": "module",
+  "description": "Moltbot Hindsight-backed long-term memory plugin for HearthMinds",
+  "dependencies": {
+    "@sinclair/typebox": "0.34.47"
+  },
+  "moltbot": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
